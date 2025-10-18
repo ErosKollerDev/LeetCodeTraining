@@ -42,19 +42,19 @@ public class A23_Leet_303_Range_Query_Sum_Immutable {
 
     public static void main(String... args) {
         A23_Leet_303_Range_Query_Sum_Immutable leet = new A23_Leet_303_Range_Query_Sum_Immutable(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
-        System.out.println(leet.sumRange(1, 4));//14
-        System.out.println(leet.sumRange(0, 4));//15
-        System.out.println(leet.sumRange(3, 8));//39
+        System.out.println("14 -> " +leet.sumRange(1, 4));//14
+        System.out.println("15 -> " +leet.sumRange(0, 4));//15
+        System.out.println("39 -> " +leet.sumRange(3, 8));//39
         System.out.println("-----");
         leet = new A23_Leet_303_Range_Query_Sum_Immutable(new int[]{-2, 0, 3, -5, 2, -1});
-        System.out.println(leet.sumRange(0, 2));//1
-        System.out.println(leet.sumRange(2, 5));//-1
-        System.out.println(leet.sumRange(0, 5));//-3
+        System.out.println("1 -> " +leet.sumRange(0, 2));//1
+        System.out.println("-1 -> " +leet.sumRange(2, 5));//-1
+        System.out.println("-3 -> " +leet.sumRange(0, 5));//-3
     }
 
 
-    public A23_Leet_303_Range_Query_Sum_Immutable(int[] ints) {
-        this.ints = ints;
+    public A23_Leet_303_Range_Query_Sum_Immutable(int[] nums) {
+        this.ints = nums;
     }
 
     public int sumRange(int left, int right) {

@@ -32,33 +32,31 @@ public class A21_Leet_006_Power_X_N_easy {
 
     public static void main(String[] args) {
         A21_Leet_006_Power_X_N_easy leet = new A21_Leet_006_Power_X_N_easy();
-//        System.out.println(leet.myPow(2, 4));//1024
-//        System.out.println(leet.myPow(4, 5));//1024
-//        System.out.println(leet.myPow(2.0000, 10));//9.26100
-//        System.out.println(leet.myPow(4.0000, 5));//9.26100
-//        System.out.println(leet.myPow(2.0000, 100));//9.26100
-//        System.out.println(leet.myPow(16.0000, 25    ));//9.26100
-//        System.out.println(leet.myPow(2.10000, 3));//9.26100
-//        System.out.println(leet.myPow(2.00000, -2));// 0.25000
-//        System.out.println(leet.myPow(2.00000, 4));// 0.25000
-//        System.out.println(leet.myPow(4.00000, 2));// 0.25000
-        System.out.println(leet.myPow(17.00000, 3));// 4913.0
-        System.out.println(leet.myPow(3.00000, 17));// 1.29140163E8
-//        System.out.println(leet.myPow(0.44528, 0));// 1.0
-//        System.out.println(leet.myPow(1.0, 2147483647));// 1.0
+        System.out.println("16 -> "+leet.pow(2, 4));//16
+        System.out.println("81 -> "+leet.pow(3, 4));//81
+//        System.out.println("1024 -> "+leet.pow(2.0000, 10));//1024
+//        System.out.println("1024 -> "+leet.pow(4.0000, 5));//1024
+//        System.out.println("1.2676506002282294E30 -> "+leet.pow(2.0000, 100));//1.2676506002282294E30
+//        System.out.println("1.2676506002282294E30 -> "+leet.pow(16.0000, 25));//1.2676506002282294E30
+//        System.out.println("9.26100 -> "+leet.pow(2.10000, 3));//9.26100
+//        System.out.println("0.25000 -> "+leet.pow(2.00000, -2));// 0.25000
+//        System.out.println("16.0 -> "+leet.pow(2.00000, 4));// 16.0
+//        System.out.println("1.0 -> "+leet.pow(0.44528, 0));// 1.0
+//        System.out.println("1.0 -> "+leet.pow(1.0, 2147483647));// 1.0
+//        System.out.println("1024 -> "+leet.pow(4, 5));//1024
     }
 
-    public double myPow(double x, int n) {
-        //convert in positive
-        long power = Math.abs((long) n);
-        //setup a minimum result
-        double valor = 1.0;
+    // (5 of Power of 5) -> 5*5*5*5*5 = 3125
+    private double pow(double base, int powerOf) {
+        if (powerOf == 0) return 1.0;
+        if (base == 1.0) return 1.0;
+        double result = base;
 
-        double xClone = x;
-        while (power > 1) {
-            xClone = xClone * x;
-            power--;
+        for (int i = 1; i < powerOf; i++) {
+            result =  result * base;
         }
-        return n < 0 ? 1.0 / xClone : xClone;
+        return result;
+
     }
+
 }

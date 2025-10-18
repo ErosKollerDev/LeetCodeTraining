@@ -16,9 +16,9 @@ public class A22_Leet_300_LongestIncreasingSubsequenceDynamicPrograming {
 
     public static void main(String[] args) {
         var longIncSub = new A22_Leet_300_LongestIncreasingSubsequenceDynamicPrograming();
-        System.out.println(longIncSub.longestIncreasingSubsequence(new int[]{0, 1, 0, 3, 2, 3})); //4
-//        System.out.println(longIncSub.longestIncreasingSubsequence(new int[]{10,9,2,5,3,7,101,18})); //4
-//        System.out.println(longIncSub.longestIncreasingSubsequence(new int[]{7,7,7,7,7,7,7})); //1
+        System.out.println("4 -> "+longIncSub.longestIncreasingSubsequence(new int[]{0, 1, 0, 3, 2, 3})); //4
+        System.out.println("4 -> "+longIncSub.longestIncreasingSubsequence(new int[]{10,9,2,5,3,7,101,18})); //4
+        System.out.println("1 -> "+longIncSub.longestIncreasingSubsequence(new int[]{7,7,7,7,7,7,7})); //1
     }
 
 

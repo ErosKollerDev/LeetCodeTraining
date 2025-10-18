@@ -1,8 +1,10 @@
 package com.roadmap;
 
-public class A25_MovingZerosToEnd {
+import com.util.PrintHelper;
+
+public class A25_Leet_283_MovingZerosToEnd {
     public static void main(String[] args) {
-        A25_MovingZerosToEnd leet = new A25_MovingZerosToEnd();
+        A25_Leet_283_MovingZerosToEnd leet = new A25_Leet_283_MovingZerosToEnd();
         int[] nums = {0, 1, 0, 3, 12};
 //        int[] position = new int[nums.length];
         //[1, 3, 12, 0, 0]
@@ -15,6 +17,7 @@ public class A25_MovingZerosToEnd {
                 position++;
             }
         }
+        PrintHelper.printArray(nums);
     }
 
     private static void swap(int[] nums, int i, int j) {

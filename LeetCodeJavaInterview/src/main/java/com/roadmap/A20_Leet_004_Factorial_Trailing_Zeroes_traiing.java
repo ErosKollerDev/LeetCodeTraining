@@ -30,7 +30,7 @@ package com.roadmap;
  * <p>
  * Follow up: Could you write a solution that works in logarithmic time complexity?
  */
-public class A20_Leet_004_Factorial_Trailing_Zeroes {
+public class A20_Leet_004_Factorial_Trailing_Zeroes_traiing {
 
     public static void main(String[] args) {
 //        int three = Leet_004_Factorial_Trailing_Zeroes.trailingZeroes(3);
@@ -42,36 +42,36 @@ public class A20_Leet_004_Factorial_Trailing_Zeroes {
 //        6*4 = 24
 //        24 * 5 = 120
         System.out.println("---------Factorial of 5 1*2*3*4*5 = 120 ----------");
-        int five = A20_Leet_004_Factorial_Trailing_Zeroes.trailingZeroes(5);
+        int five = A20_Leet_004_Factorial_Trailing_Zeroes_traiing.trailingZeroes(5);
         System.out.println("Factorial of 5 should be 1 -> " + five);
         System.out.println("-------------------");
-        int ten = A20_Leet_004_Factorial_Trailing_Zeroes.trailingZeroes(10);
+        int ten = A20_Leet_004_Factorial_Trailing_Zeroes_traiing.trailingZeroes(10);
         System.out.println("Factorial of 10 should be 2 -> " + ten);
         System.out.println("-------------------");
-        int n20 = A20_Leet_004_Factorial_Trailing_Zeroes.trailingZeroes(20);
+        int n20 = A20_Leet_004_Factorial_Trailing_Zeroes_traiing.trailingZeroes(20);
         System.out.println("Factorial of 20 should be 4 -> " + n20);
         System.out.println("-------------------");
-        int n25 = A20_Leet_004_Factorial_Trailing_Zeroes.trailingZeroes(25);
+        int n25 = A20_Leet_004_Factorial_Trailing_Zeroes_traiing.trailingZeroes(25);
         System.out.println("Factorial of 25 should be 6 -> " + n25);
         System.out.println("-------------------");
-        int n125 = A20_Leet_004_Factorial_Trailing_Zeroes.trailingZeroes(125);
+        int n125 = A20_Leet_004_Factorial_Trailing_Zeroes_traiing.trailingZeroes(125);
         System.out.println("Factorial of 125 should be 31 ->  " + n125);
         System.out.println("-------------------");
+    }
+
+    private static int trailingZeroes(int factorialNumber) {
+        if(factorialNumber < 5) return 0;
+        int zeros = 0;
+        var currentPowerOfFive = 5;
+        while(factorialNumber >= currentPowerOfFive){
+            zeros += (factorialNumber / currentPowerOfFive);
+            currentPowerOfFive *= 5;
+        }
+        return zeros;
     }
     //Obs hint Every even number multiplied by 5 produces a trailing zero numbers
     // 5 factorial -> 5x4x3x2x1 = 120 just one zero
     //10 factorial -> 10x9x8x7x6x5x4x3x2x1 = 3_628_800 two zeros
-    public static int trailingZeroes(int factorialNumber) {
-        if (factorialNumber < 5) return 0;
-        int zeros = 0;
-        int currentPowerOf5 = 5;
-        while (factorialNumber >= currentPowerOf5) {
-            // 0 + 0 / 5
-            zeros += (factorialNumber / currentPowerOf5);
-            // 5 * 5 = 25
-            currentPowerOf5 *= 5;
-        }
-        return zeros;
-    }
+
     //TC: 0(log5 n) SC: 0(1)
 }
