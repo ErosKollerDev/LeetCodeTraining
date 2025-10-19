@@ -54,13 +54,13 @@ public class A12_Leet_016_ValidParentheses {
 //        System.out.println(leet.isValid("({[]})[]{}"));//true
     }
 
-    private boolean isValid(String str) {
+    private boolean isValid(String parentheses) {
         var closingSymbolMap = new HashMap<Character, Character>();
         closingSymbolMap.put(')', '(');
         closingSymbolMap.put('}','{');
         closingSymbolMap.put(']','[');
         var openingSymbolStack = new Stack<Character>(   );
-        var chars = str.toCharArray()   ;
+        var chars = parentheses.toCharArray()   ;
         for(Character current : chars){
             //There is a closing symbol like this ?
             if(closingSymbolMap.containsKey(current)){

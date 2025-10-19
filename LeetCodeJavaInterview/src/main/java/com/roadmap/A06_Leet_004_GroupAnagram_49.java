@@ -53,9 +53,9 @@ public class A06_Leet_004_GroupAnagram_49 {
     }
 
     //List<List<String>> groupAnagrams(String[] strs)
-    public List<List<String>> groupAnagrams(String[] strs) {
+    public List<List<String>> groupAnagrams(String[] words) {
         Map<String, List<String>> map = new HashMap<>();
-        for (String str : strs) {
+        for (String str : words) {
             char[] charArray = str.toCharArray();
             Arrays.sort(charArray);
             String key = new String(charArray);

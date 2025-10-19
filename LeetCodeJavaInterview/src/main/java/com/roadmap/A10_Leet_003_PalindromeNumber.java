@@ -40,21 +40,21 @@ public class A10_Leet_003_PalindromeNumber {
         System.out.println("-----------------");
         System.out.println(A10_Leet_003_PalindromeNumber.isPalindrome(9));
     }
-    public static  boolean isPalindrome(int x) {
+    public static  boolean isPalindrome(int number) {
 //        if(x == 0) return true;
-        if(x < 0) return false;
-        if(x >= 0 && x <= 9) return true;
-        if(x % 10 == 0)return false;
+        if(number < 0) return false;
+        if(number >= 0 && number <= 9) return true;
+        if(number % 10 == 0)return false;
 
         int reverse = 0;
-        while(reverse < x){
-            int lastD = x % 10;
+        while(reverse < number){
+            int lastD = number % 10;
             reverse = reverse * 10 + lastD;
-            x = x / 10;
+            number = number / 10;
         }
 
 
-        return x == reverse || reverse / 10 == x ? true : false;
+        return number == reverse || reverse / 10 == number ? true : false;
     }
 
 }
