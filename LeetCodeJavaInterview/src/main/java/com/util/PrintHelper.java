@@ -11,6 +11,10 @@ public class PrintHelper {
         int[][] array = Arrays.stream(matrix).map(a -> Arrays.stream(a).mapToInt(Integer::intValue).toArray()).toArray(int[][]::new);
         Arrays.stream(matrix).map(ary -> Arrays.stream(ary).mapToInt(Integer::intValue).toArray()).toArray(int[][]::new);
         printMatrix(array);
+        System.gc();
+
+
+
     }
 
     public static void printMatrix(int[][] matrix) {
