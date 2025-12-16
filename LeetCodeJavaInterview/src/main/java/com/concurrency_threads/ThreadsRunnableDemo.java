@@ -1,4 +1,4 @@
-package com.concurrency;
+package com.concurrency_threads;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,8 +94,8 @@ public class ThreadsRunnableDemo {
         public void run() {
             String threadName = Thread.currentThread().getName();
             System.out.println("[" + threadName + "] running task: " + taskName);
-            try{
-                synchronized(lock) {  // Synchronize on the lock
+            try {
+                synchronized (lock) {  // Synchronize on the lock
                     lock.wait(100);    // Wait on the lock object
                 }
             } catch (InterruptedException e) {
@@ -106,7 +106,7 @@ public class ThreadsRunnableDemo {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("--- Threads/Runnable Basics ---");
+        System.out.println("--- Threads/Runnable Basics  Start ---");
 
         // 1) Starting a thread by extending Thread
         Thread t1 = new MyThread("extend-1");

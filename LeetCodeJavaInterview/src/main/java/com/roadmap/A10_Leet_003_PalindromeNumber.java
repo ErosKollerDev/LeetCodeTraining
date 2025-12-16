@@ -54,7 +54,7 @@ public class A10_Leet_003_PalindromeNumber {
         }
 
 
-        return number == reverse || reverse / 10 == number ? true : false;
+        return number == reverse || reverse / 10 == number;
     }
 
 }
